@@ -1,0 +1,148 @@
+body {
+	background: #FFFFFF url("../img/fundo_60.jpg") no-repeat right top fixed;
+	font-family: sans-serif;
+	font-size: 1em;
+	color: #000000;
+}
+
+.container_inicio {
+	margin: 0 auto;
+	margin-top: 2em;
+	padding-top: 1em;
+	padding-left: 2em;	
+	width: 70%;
+	height: 500px;
+	border: 1px #999 solid;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.container {
+	margin: 0 auto;
+	margin-top: 1em;
+	padding-top: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+	width: 70%;
+	height: 580px;
+	border: 1px #999 solid;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.btn {
+	background-color: #5991B2;
+	border: 1px #F5F5F5 solid;
+	margin: 1em;
+	display: inline-block;
+	text-align: center;
+	padding: 2em;
+	width: 250px;
+}
+
+.btn:hover {
+	background: #63A2C7;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 700;
+}
+
+p {
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+.titulo {
+	float: right;
+	margin-right: 12.5em;
+	margin-top: 2em;
+}
+
+.topo {
+	align-self: center;
+}
+
+footer {
+	text-align: center;
+	margin-top: 2em;
+}
+
+/* ***** FORMULÁRIO ***** */
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #5991B2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #63A2C7;
+}
+
+input[type=button] {
+	background-color: gray;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+	margin-right: 2%;
+  }
+  
+  input[type=button]:hover {
+	background-color: gray;
+  }
+
+.col-20 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-80 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.botao {
+	margin-top: 0.5em;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-20, .col-80, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
