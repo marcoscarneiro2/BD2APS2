@@ -139,6 +139,30 @@ input[type=button] {
 	margin-top: 0.5em;
 }
 
+.blue-white-table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #e6f0ff;
+	text-align: center;
+  }
+  
+  .blue-white-table thead th {
+	background-color: #007bff;
+	color: #ffffff;
+	padding: 10px;
+  }
+  
+  .blue-white-table tbody td {
+	background-color: #ffffff;
+	color: #000000;
+	padding: 10px;
+  }
+  
+  .blue-white-table tbody tr:nth-child(even) td {
+	background-color: #f2f2f2;
+  }
+  
+
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .col-20, .col-80, input[type=submit] {

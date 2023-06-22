@@ -12,19 +12,19 @@
 			<a href="./pages/cad_medico.php">Cadastro Médico</a>
 		</div>
 		<div class="btn">
-			<a href="cad_paciente.html">Cadastro Paciente</a>
+			<a href="./pages/cad_paciente.php">Cadastro Paciente</a>
 		</div>
 		<div class="btn">
-			<a href="cons_agendada.html">Consultas Agendadas</a>
+			<a href="./pages/cons_agendada.php">Consultas Agendadas</a>
 		</div>
 		<div class="btn">
-			<a href="ficha_atendimento.html">Ficha Atendimento</a>
+			<a href="./pages/ficha_atendimento.php">Ficha Atendimento</a>
 		</div>
 		<div class="btn">
-			<a href="ficha_paciente.html">Ficha Paciente</a>
+			<a href="./pages/ficha_paciente.php">Ficha Paciente</a>
 		</div>
 		<div class="btn">
-			<a href="marcacao_consulta.html">Marcação Consulta</a>
+			<a href="./pages/marcacao_consulta.php">Marcação Consulta</a>
 		</div>
 	</div>
 </body>

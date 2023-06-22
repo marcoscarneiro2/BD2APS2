@@ -3,54 +3,55 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="../assets/css/estilo.css">
-	<title>Saúde Sempre - Cadastro Médico</title>
+	<title>Saúde Sempre - Ficha do Paciente</title>
 </head>
 <body>
 	<div class="container">
 		<div class="topo">
 			<a href="index.html"><img class="logo" src="../assets/img/logo2.png"></a>
-			<p class="titulo">Cadastro Médico</p><hr>
+			<p class="titulo">Ficha do Paciente</p><hr>
+			<span id="msg"></span>
+		</div>
+		<div class="row">
+			<form>
+
+				<div class="col-20">
+					<label for="cpf">CPF</label>
+				</div>
+				<div class="col-80">
+					<select id="cpf" name="cpf" onchange="pesquisar();">
+					<option></option>
+						<?php
+						include_once '../php/conexao.php';
+						// Consulta SQL para obter os CPFs dos clientes
+						$sql = "SELECT cpf FROM paciente";
+						$resultado = $conn->query($sql);
+
+						// Verificar se a consulta retornou resultados
+						if ($resultado->num_rows > 0) {
+							// Loop pelos resultados e criar as opções do select
+							while ($row = $resultado->fetch_assoc()) {
+								$cpf = $row['cpf'];
+
+								// Adicionar uma opção ao select com o CPF do cliente
+								echo "<option value='$cpf'>$cpf</option>";
+							}
+						}
+						
+						$conn->close();
+						?>
+					</select>
+				</div>
+			</form>
 		</div>
 		<div>
-			<form method="POST" action="../php/marcacao_consulta.php">
-				<div class="row">
-					<div class="col-20">
-						<label for="crm">CRM</label>
-					</div>
-					<div class="col-80">
-						<input type="text" id="crm" name="crm" placeholder="Digite o seu CRM">
-					</div>
-				</div>
+			<form>
 				<div class="row">
 					<div class="col-20">
 						<label for="nome">Nome</label>
 					</div>
 					<div class="col-80">
 						<input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-20">
-						<label for="especialidade">Especialidade</label>
-					</div>
-					<div class="col-80">
-						<select id="especialidade" name="especialidade">
-							<option value="clinico">Clinico Geral</option>
-							<option value="ortopedista">Ortopedista</option>
-							<option value="cardiologista">Cardiologista</option>
-							<option value="oncologia">Oncologista</option>
-							<option value="gastro">Gastroenterologista</option>
-							<option value="geriatra">Geriatria</option>
-							<option value="dermatologista">Dermatologista</option>
-						</select>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-20">
-						<label for="cnpj">CNPJ/CPF</label>
-					</div>
-					<div class="col-80">
-						<input type="text" id="cnpj" name="cnpj" placeholder="Digite o seu nome CNPJ ou CPF">
 					</div>
 				</div>
 				<div class="row">
@@ -82,15 +83,19 @@
 						<label for="email">E-mail</label>
 					</div>
 					<div class="col-80">
-						<input type="text" id="email" name="email" placeholder="Digite o seu e-mail">
+						<input type="email" id="email" name="email" placeholder="Digite o seu e-mail">
 					</div>
 				</div>
 				<div class="row botao">
-    				<input type="submit" value="Salvar">
-                    <input type="button" value="Cancelar" onclick="window.location.href = '../index.php';">
+    				<input type="submit" value="Submit">
+					<input type="button" value="Cancelar" onclick="window.location.href = '../index.php';">
   				</div>
 			</form>
 		</div>
 	</div>
+
+	<span id="listar-produtos"></span>
+
+<script src="../assets/js/custom.js"></script>
 </body>
 </html>
